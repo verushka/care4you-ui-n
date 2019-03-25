@@ -1,0 +1,35 @@
+<article class="department-container">
+
+  <section class="department-table">
+    <h5 class="department-text-title">Departments Information</h5>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th scope="col" class="department-text">#</th>
+        <th scope="col" class="department-text">Code</th>
+        <th scope="col" class="department-text">Name</th>
+        <th scope="col" class="department-text">Description</th>
+        <th scope="col" class="department-text">Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let department of infoDepartments; index as i">
+        <th scope="row" class="department-text">{{ i + 1 }}</th>
+        <td class="department-text">{{ department.code }}</td>
+        <td class="department-text">{{ department.name }}</td>
+        <td class="department-text">{{ department.description }}</td>
+        <td>
+          <div class="btn-group" role="group">
+            <button type="button"
+                    class="btn btn-outline-info fa fa-pencil" (click)="onUpdateAction($event, department)"></button>
+            <button type="button"
+                    class="btn btn-outline-danger fa fa-trash" (click)="onDeleteAction($event, department)"></button>
+          </div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+
+
+</article>

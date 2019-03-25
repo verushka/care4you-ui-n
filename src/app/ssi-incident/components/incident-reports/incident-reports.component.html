@@ -1,0 +1,22 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-title">Generate Reports</h4>
+  <button type="button" class="close" aria-label="Close button" aria-describedby="modal-title"
+          (click)="modal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <section class="form-group">
+    <label for="format">Select format</label>
+    <select class="form-control"
+            id="format"
+            [(ngModel)]="selectedFormat">
+      <option *ngFor="let format of formats; index as i"
+              [ngValue]="format">{{format}}</option>
+    </select>
+  </section>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-secondary" (click)="modal.dismiss('cancel click')">Cancel</button>
+  <button type="button" ngbAutofocus class="btn btn-danger" (click)="generateReport()">Generate</button>
+</div>

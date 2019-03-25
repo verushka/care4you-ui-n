@@ -1,0 +1,22 @@
+@import "../../../../assets/grid/ssi-ui-variables";
+
+:host {
+  display: flex;
+  height: 100%;
+}
+
+.incident-list {
+  width: 100%;
+}
+
+.incident-table {
+  color: white;
+}
+
+.incidents-list-jumbotron {
+  color: white;
+}
+
+.incidents-list-jumbotron-divider {
+  background: white;
+}

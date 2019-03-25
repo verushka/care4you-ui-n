@@ -1,0 +1,54 @@
+@import "./../../../assets/grid/ssi-ui-variables";
+@import "./../../../assets/grid/ssi-flexbox";
+
+.home-root {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - #{$navHeightWithPadding});
+  width: 100%;
+}
+
+.carousel-img {
+  width: calc(100vw - 2px);
+  height: calc(100vh - #{$navHeight});
+}
+
+.home-container {
+  display: flex;
+  width: 100%;
+  padding: 40px 20px;
+
+  @include ssi-main-center();
+}
+
+.home-content {
+  display: flex;
+  width: 70%;
+  padding: 20px 10px;
+
+  @include ssi-main-center();
+
+}
+
+.home-content-img {
+  width: 40%;
+
+}
+
+.home-content-img-size {
+  width: 306px;
+  height: 236px;
+}
+
+.home-content-text {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+}
+
+.home-content-title {
+  font-size: 20px;
+  width: 100%;
+  @include ssi-main-center();
+}

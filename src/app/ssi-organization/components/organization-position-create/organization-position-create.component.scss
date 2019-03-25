@@ -1,0 +1,40 @@
+@import "../../../../assets/grid/ssi-ui-variables";
+@import "../../../../assets/grid/ssi-flexbox";
+
+:host {
+  display: flex;
+  height: 100%;
+  padding: 10px;
+}
+
+.position-create {
+  width: 100%;
+  color: white;
+
+}
+
+.position-create-img-container {
+  display: flex;
+  width: 40%;
+  height: 70%;
+
+  @include ssi-main-center();
+  @include ssi-cross-center();
+}
+
+.position-create-img {
+  border-radius: 50%;
+  height: 200px;
+  padding: 20px;
+
+}
+
+.position-create-text-title {
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+}
+
+.position-create-btn {
+  text-align: center;
+}

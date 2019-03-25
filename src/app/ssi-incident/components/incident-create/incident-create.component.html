@@ -1,0 +1,91 @@
+<form class="incident-create" [formGroup]="incidentFormGroup" (ngSubmit)="onSubmit()">
+  <section class="form-group">
+    <label for="name">Name</label>
+    <input type="text"
+           class="form-control"
+           formControlName="name"
+           id="name"
+           aria-describedby="nameHelp"
+           placeholder="Name of the incident"
+           autofocus>
+    <small class="form-text text-danger"
+           *ngIf="submitted && incidentFormGroup.get('name').errors">
+      This field is required.
+    </small>
+  </section>
+
+  <section class="form-group">
+    <label for="description">Description</label>
+    <textarea class="form-control"
+              formControlName="description"
+              id="description"
+              aria-describedby="descriptionHelp"
+              placeholder="Please enter a brief description"></textarea>
+    <small class="form-text text-danger"
+           *ngIf="submitted && incidentFormGroup.get('description').errors">
+      This field is required.
+    </small>
+  </section>
+
+  <section class="form-group">
+    <div class="input-group">
+      <input type="date"
+             class="form-control"
+             formControlName="date"
+             placeholder="yyyy-mm-dd"
+             name="date"
+             ngbDatepicker #d="ngbDatepicker"
+             readonly="true"
+             (focus)="d.open()">
+      <div class="input-group-append">
+        <button class="btn btn-light fa fa-calendar" (click)="d.toggle()" type="button"></button>
+      </div>
+    </div>
+    <small class="form-text text-danger"
+           *ngIf="submitted && incidentFormGroup.get('date').errors">
+      This field is required.
+    </small>
+  </section>
+
+  <section class="form-group">
+    <label for="type">Type</label>
+    <select class="form-control"
+            id="type"
+            formControlName="type">
+      <option *ngFor="let type of incidentTypes" value="{{type}}">{{type}}</option>
+    </select>
+    <small class="form-text text-danger"
+           *ngIf="submitted && incidentFormGroup.get('type').errors">
+      This field is required.
+    </small>
+  </section>
+
+  <section class="form-group">
+    <label for="severity">Severity</label>
+    <select class="form-control"
+            id="severity"
+            formControlName="severity">
+      <option *ngFor="let severity of incidentSeverities" value="{{severity}}">{{severity}}</option>
+    </select>
+    <small class="form-text text-danger"
+           *ngIf="submitted && incidentFormGroup.get('severity').errors">
+      This field is required.
+    </small>
+  </section>
+
+  <section class="form-group">
+    <label for="severity">Employee</label>
+    <select class="form-control"
+            id="employeeId"
+            formControlName="employeeId">
+      <option *ngFor="let employee of employees"
+              value="{{employee.id}}">{{employee.firstName}} {{employee.lastName}}</option>
+    </select>
+    <small class="form-text text-danger"
+           *ngIf="submitted && incidentFormGroup.get('employeeId').errors">
+      This field is required.
+    </small>
+  </section>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

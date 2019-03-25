@@ -1,0 +1,39 @@
+<form class="position-create" [formGroup]="positionFormGroup" (ngSubmit)="onSubmit()">
+  <h5 class="position-create-text-title">Position Information</h5>
+  <section class="form-group">
+    <label for="name">Code</label>
+    <input type="text"
+           class="form-control"
+           formControlName="code"
+           id="code"
+           aria-describedby="codeHelp"
+           placeholder="Write the code of position">
+  </section>
+  <section class="form-group">
+    <label for="name">Name</label>
+    <input type="text"
+           class="form-control"
+           formControlName="name"
+           id="name"
+           aria-describedby="nameHelp"
+           placeholder="Write name of position">
+  </section>
+
+  <section class="form-group">
+    <label for="description">Description</label>
+    <input type="text"
+           class="form-control"
+           formControlName="description"
+           id="description"
+           aria-describedby="descriptionHelp"
+           placeholder="write here a description for the position">
+  </section>
+
+  <section class="position-create-btn">
+    <button type="submit" class="btn btn-success">Submit</button>
+  </section>
+
+</form>
+<section class="position-create-img-container">
+  <img src="../../../../assets/images/department-create.jpg" alt="department" class="position-create-img">
+</section>

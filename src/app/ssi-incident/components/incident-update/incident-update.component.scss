@@ -1,0 +1,11 @@
+@import "../../../../assets/grid/ssi-ui-variables";
+
+:host {
+  display: flex;
+  height: 100%;
+}
+
+.incident-create {
+  width: 100%;
+  color: white;
+}

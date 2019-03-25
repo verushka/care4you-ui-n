@@ -1,0 +1,5 @@
+export enum IncidentTypeEnum {
+  FRACTURE = 'FRACTURE',
+  SLIGHT_INJURY = 'SLIGHT_INJURY',
+  BLEEDING = 'BLEEDING'
+}

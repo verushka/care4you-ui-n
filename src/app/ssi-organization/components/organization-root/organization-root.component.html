@@ -1,0 +1,21 @@
+<article class="organization-root">
+  <article class="shared-full-view organization-root">
+    <section class="organization-root-menu">
+      <div class="list-group">
+      <span class="list-group-item text-center organization-root-menu-item-header">
+        Operations
+      </span>
+        <a routerLink="/organization/department" class="list-group-item list-group-item-action organization-root-menu-item">Departments</a>
+        <a routerLink="/organization/department-create" class="list-group-item list-group-item-action organization-root-menu-item">Create a department</a>
+        <a routerLink="/organization/position" class="list-group-item list-group-item-action organization-root-menu-item">Position</a>
+        <a routerLink="/organization/position-create" class="list-group-item list-group-item-action organization-root-menu-item">Create a position</a>
+        <a routerLink="/organization/department" class="list-group-item list-group-item-action organization-root-menu-item">Reports</a>
+      </div>
+    </section>
+    <section class="organization-root-body">
+      <router-outlet></router-outlet>
+    </section>
+  </article>
+</article>
+
+<img src="../../../../assets/images/department-chart-img.jpg" alt="background" class="shared-full-view organization-root-bg">

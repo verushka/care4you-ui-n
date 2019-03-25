@@ -1,0 +1,41 @@
+<article class="incident-list">
+
+  <table *ngIf="incidents.length > 0" id="table" class="table table-striped incident-table">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Employee</th>
+      <th scope="col">Incident</th>
+      <th scope="col">Type</th>
+      <th scope="col">Severity</th>
+      <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let incident of incidents; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ incident.employee.firstName + ' ' + incident.employee.lastName }}</td>
+      <td>{{ incident.name }}</td>
+      <td>{{ incident.type }}</td>
+      <td>{{ incident.severity }}</td>
+      <td>
+        <div class="btn-group" role="group">
+          <button type="button"
+                  class="btn btn-outline-light fa fa-pencil"
+                  (click)="onUpdateAction($event, incident)"></button>
+          <button type="button"
+                  class="btn btn-outline-warning fa fa-trash"
+                  (click)="onDeleteAction($event, incident)"></button>
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="incidents.length <= 0" class="jumbotron bg-transparent incidents-list-jumbotron">
+    <h1 class="display-4 text-center">Congratulations!</h1>
+    <hr class="my-4 incidents-list-jumbotron-divider">
+    <p class="lead">Your company doesn't have any incident until this moment.</p>
+  </div>
+
+</article>

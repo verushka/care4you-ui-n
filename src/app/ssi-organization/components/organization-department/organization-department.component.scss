@@ -1,0 +1,63 @@
+@import "../../../../assets/grid/ssi-flexbox";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 70%;
+}
+
+.department-container {
+  height: 100%;
+  overflow-y: auto;
+
+  @include ssi-main-center();
+}
+
+.organization-api-content {
+  width: 100%;
+
+  padding: 20px;
+}
+
+.department-table {
+  display: flex;
+  width: 90%;
+  padding: 10px;
+  color: #ffffff;
+
+  @include ssi-main-center();
+}
+
+.department-text{
+  color: #ffffff;
+}
+
+.department-form-container {
+
+  width: 100%;
+  padding: 20px;
+
+  @include ssi-flex();
+  @include ssi-main-center();
+}
+
+.department-img {
+  width: 300px;
+  height: 200px;
+}
+
+.department-form-img {
+  display: flex;
+  width: 40%;
+
+  @include ssi-main-center();
+}
+
+.department-form-content {
+  display: flex;
+  width: 50%;
+}
+.department-text-title{
+  color: #ffffff;
+}

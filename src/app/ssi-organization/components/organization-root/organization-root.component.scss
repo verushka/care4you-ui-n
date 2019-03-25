@@ -1,0 +1,59 @@
+@import "../../../../assets/grid/ssi-ui-variables";
+
+:host {
+  display: flex;
+  position: relative;
+  flex-flow: row nowrap;
+  height: calc(100vh - #{$navHeightWithPadding});
+  width: 100%;
+  padding: 10px 10px 0;
+}
+
+.organization-root-bg {
+  position: absolute;
+  -ms-filter: blur(7px);
+  filter: blur(7px);
+  opacity: 0.9;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.organization-root {
+  border: 1px solid $navColor;
+  background-color: rgba(32, 39, 42, 0.5);
+  border-radius: 5px;
+  display: flex;
+  width: 100%;
+}
+
+.organization-root-menu {
+  background-color: rgba(11,33,97, 0.5);
+  width: 20%;
+}
+
+.organization-root-body {
+  padding: 10px;
+  width: 80%;
+
+}
+
+.organization-root-menu-item-header {
+  background: rgba(11,33,97, 0.8);
+  color: white;
+}
+
+.organization-root-menu-item {
+  background: rgba(213, 224, 228, 0.18);
+  padding: 1.25rem;
+  color: white;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.8);
+    color: rgb(32, 39, 42);
+    -webkit-transition: background-color 1000ms linear, color 1000ms linear;
+    -ms-transition: background-color 1000ms linear, color 1000ms linear;
+    transition: background-color 1000ms linear, color 1000ms linear;
+  }
+}
+

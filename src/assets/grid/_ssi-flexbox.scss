@@ -1,0 +1,100 @@
+
+/*Grid
+ */
+%ssi-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+%ssi-box {
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+@mixin ssi-container {
+  @extend %ssi-container;
+
+}
+@mixin ssi-full {
+  max-width: 100%;
+}
+@mixin ssi-box() {
+  @extend %ssi-box;
+
+}
+/*
+* This defines a flex container; inline or block depending on the given value. It enables a flex context for all its direct children.
+ */
+@mixin ssi-flex {
+  display   : flex;
+  flex-wrap : wrap;
+}
+
+/*
+* Justify-Content: This defines the alignment along the main axis.
+ */
+
+@mixin ssi-main-justify {
+  @include ssi-flex;
+  justify-content : space-between;
+}
+
+@mixin ssi-main-distribute {
+  @include ssi-flex;
+  justify-content : space-around;
+}
+
+@mixin ssi-main-center {
+  @include ssi-flex;
+  justify-content : center;
+}
+
+@mixin ssi-main-start{
+  @include ssi-flex;
+  justify-content : flex-start;
+}
+
+@mixin ssi-main-end{
+  @include ssi-flex;
+  justify-content : flex-end;
+}
+
+// At the start in the cross axis for CSSCore
+@mixin ssi-cross-start{
+  @include ssi-flex;
+  align-items   : flex-start;
+  align-content : flex-start;
+}
+
+// To the center on the cross axis for CSSCore
+@mixin ssi-cross-center {
+  @include ssi-flex;
+  align-items   : center;
+  align-content : center;
+}
+
+// At the end on the cross axis for CSSCore
+@mixin ssi-cross-end{
+  @include ssi-flex;
+  align-items   : flex-end;
+  align-content : flex-end;
+}
+
+// Container orientation
+@mixin ssi-flex-reverse {
+  @include ssi-flex;
+  flex-direction : row-reverse;
+}
+
+@mixin ssi-flex-column {
+  @include ssi-flex;
+  flex-direction : column;
+}
+
+
+@mixin ssi-flex-column-reverse {
+  @include ssi-flex;
+  flex-direction : column-reverse;
+}

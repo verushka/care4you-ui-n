@@ -1,0 +1,48 @@
+<form class="department-update" [formGroup]="departmentFormGroup" (ngSubmit)="onSubmit()">
+  <h5 class="department-update-text-title">Department Information</h5>
+  <section class="form-group">
+    <label for="name">Code</label>
+    <input type="text"
+           class="form-control"
+           formControlName="code"
+           id="code"
+           aria-describedby="codeHelp"
+           placeholder="Write code of department">
+    <small class="form-text text-danger"
+           *ngIf="submitted && departmentFormGroup.get('code').errors">
+      This field is required.
+    </small>
+  </section>
+  <section class="form-group">
+    <label for="name">Name</label>
+    <input type="text"
+           class="form-control"
+           formControlName="name"
+           id="name"
+           aria-describedby="nameHelp"
+           placeholder="Write name of department">
+    <small class="form-text text-danger"
+           *ngIf="submitted && departmentFormGroup.get('name').errors">
+      This field is required.
+    </small>
+  </section>
+
+
+  <section class="form-group">
+    <label for="description">Description</label>
+    <input type="text"
+           class="form-control"
+           formControlName="description"
+           id="description"
+           aria-describedby="descriptionHelp"
+           placeholder="write here a description for the department">
+  </section>
+
+  <section class="department-update-btn">
+    <button type="submit" class="btn btn-success">Submit</button>
+  </section>
+
+</form>
+<section class="department-update-img-container">
+  <img src="../../../../assets/images/department-create.jpg" alt="department" class="department-update-img">
+</section>

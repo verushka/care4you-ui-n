@@ -1,0 +1,36 @@
+@import "../../../../assets/grid/ssi-ui-variables";
+@import "../../../../assets/grid/ssi-flexbox";
+
+:host {
+  display: flex;
+  height: 100%;
+  padding: 10px;
+}
+
+.department-update {
+  width: 100%;
+  color: white;
+}
+
+.department-update-img-container{
+  display: flex;
+  width: 40%;
+  height: 70%;
+
+  @include ssi-main-center();
+  @include ssi-cross-center();
+}
+.department-update-img{
+  border-radius: 50%;
+  height: 200px;
+  padding: 20px;
+
+}
+.department-update-text-title{
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+}
+.department-update-btn {
+  text-align: center;
+}

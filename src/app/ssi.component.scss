@@ -1,0 +1,43 @@
+@import "./../assets/grid/ssi-flexbox";
+
+.ssi-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.ssi-header {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+
+  background: #20272a;
+  color: #fff;
+  padding: 25px;
+
+  @include ssi-cross-center();
+  @include ssi-main-end();
+}
+
+.ssi-title {
+  font-size: 25px;
+  font-weight: 400;
+  text-align: right;
+  color: #5882FA;
+  padding-right: 10px;
+}
+
+.ssi-body {
+  border-top: 1px solid #e3e9ea;
+}
+
+.ssi-top {
+  display: flex;
+  height: 60px;
+  width: 100%;
+
+  background-color: #20272a;
+}
+
+.ssi-menu {
+  width: 70%;
+}
